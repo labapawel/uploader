@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { WdApiService } from './wd-api.service';
 
 @Component({
   selector: 'app-root',
@@ -10,4 +11,9 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'uploader';
+
+  constructor(private wdApi: WdApiService) {
+    //this.wdApi.login('admin', 'admin');
+
+  }
 }

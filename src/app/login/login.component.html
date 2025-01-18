@@ -1,0 +1,21 @@
+<div class="login-container">
+    <div class="login-form">
+        <div class="login-header">
+            <h1>Logowanie</h1>
+            <p class="text-muted">Wprowadź dane do logowania</p>
+        </div>    
+        <div class="form-floating">
+            <input type="text" class="form-control" id="album" [(ngModel)]="username" placeholder="album" >
+            <label for="album">Album studenta</label>
+        </div>
+        <div class="form-floating">
+            <input type="password" class="form-control" [(ngModel)]="password" id="password" placeholder="Hasło">
+            <label for="password">Hasło</label>
+        </div>
+
+        <button class="btn btn-primary btn-login" (click)="login()">Zaloguj się</button>
+            
+    
+    </div>
+        
+</div>

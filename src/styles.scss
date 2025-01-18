@@ -1,1 +1,132 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #2c2c2c;
+    color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.menu {
+    width: 25%;
+    background-color: #1e1e1e;
+    border-right: 2px solid #e63946;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.menu h2 {
+    color: #e63946;
+    margin-bottom: 20px;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu ul li {
+    display: flex;
+    gap: 5px;
+    margin: 10px 0;
+}
+.menu ul li .name {
+    flex-grow: 1;
+}
+
+.menu ul li span {
+    color: #f0f0f0;
+    padding: 10px;
+    background-color: #b02735;
+    cursor: pointer;
+    
+}
+.menu ul li span.name {
+    color: #f0f0f0;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    background-color: #333;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.menu ul li a:hover {
+    background-color: #e63946;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.content h2 {
+    color: #e63946;
+    margin-bottom: 20px;
+}
+
+.search {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.search input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #e63946;
+    border-radius: 5px 0 0 5px;
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    outline: none;
+}
+
+.search button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #e63946;
+    color: #f0f0f0;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    transition: background-color 0.3s;
+}
+
+.search button:hover {
+    background-color: #b02735;
+}
+
+.uploaded-items {
+    list-style: none;
+    padding: 0;
+}
+
+.uploaded-items li {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #333;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.uploaded-items li span {
+    color: #f0f0f0;
+}
+
+.uploaded-items li button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #e63946;
+    color: #f0f0f0;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+.uploaded-items li button:hover {
+    background-color: #b02735;
+}
