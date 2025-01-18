@@ -117,7 +117,7 @@ body {
     color: #f0f0f0;
 }
 
-.uploaded-items li button {
+.uploaded-items li .button {
     padding: 5px 10px;
     border: none;
     background-color: #e63946;
@@ -125,6 +125,7 @@ body {
     cursor: pointer;
     border-radius: 3px;
     transition: background-color 0.3s;
+    text-decoration: none;
 }
 
 .uploaded-items li button:hover {

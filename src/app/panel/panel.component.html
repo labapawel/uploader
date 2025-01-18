@@ -9,13 +9,16 @@
     <div class="content">
         <h2>Lista wysłanych elementów</h2>
         <div class="search">
-            <input type="text" placeholder="Wyszukaj element...">
-            <button>Szukaj</button>
+            <input type="text" placeholder="Wyszukaj element..." [(ngModel)]="filename">
         </div>
         <ul class="uploaded-items">
-            <li *ngFor="let file of files">
-                <span>{{file.filename}}</span>
-                <button>Pobierz</button>
+            <li *ngFor="let file of filesFilter()">
+                <div class="flex">
+                    <span class="stoproc">{{file.filename}}</span>
+                    <span>{{formatDate(file.timestamp)}}</span>
+                    <span>{{file.sizeMb}} Mb</span>
+                    <a class="button" href="https://doha.wsi.edu.pl:10005/download?id={{file.id}}&wdauth={{wdApi.wdauth}}">Pobierz</a>
+                </div>
             </li>
            
         </ul>

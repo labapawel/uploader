@@ -1,3 +1,17 @@
 .menu {
     overflow: auto;
 }
+
+.flex {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    
+    & > * {
+        padding: 10px;
+    }
+}
+
+.stoproc {
+    flex-grow: 1;
+}

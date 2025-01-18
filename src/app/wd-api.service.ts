@@ -32,6 +32,7 @@ export class WdApiService {
   get isLogged():boolean {
     return this.userinfo.studentid != undefined;
   }
+  
 
   public getUploadKat(active:boolean=true){
    // if(this.isLogged){
