@@ -1,23 +1,23 @@
 {
     "object": "chat.completion",
     "id": "",
-    "created": 1736595659,
-    "model": "meta-llama/Llama-3.1-8B-Instruct",
+    "created": 1737200737,
+    "model": "meta-llama/Llama-3.3-70B-Instruct",
     "system_fingerprint": "3.0.1-sha-bb9095a",
     "choices": [
         {
             "index": 0,
             "message": {
                 "role": "assistant",
-                "content": "Once upon a time, in a small village nestled in the rolling hills of a far-off land, there lived a young girl named Luna. Luna was a curious and adventurous soul, with a heart full of wonder and a mind full of questions. She spent her days exploring the woods, watching the stars, and listening to the stories of the village elders.\n\nOne day, while wandering through the forest, Luna stumbled upon a hidden path she had never seen before. The path was overgrown with vines and shrubs, and it seemed to lead to a place that few people had ever been. Luna's curiosity was piqued, and she decided to follow the path to see where it would take her.\n\nAs she walked, the trees grew taller and the air grew thick with an otherworldly energy. Luna could feel the magic in the air, and she knew that she was getting close to something special. Suddenly, the path opened up into a clearing, and Luna found herself standing in front of a beautiful, shimmering lake.\n\nThe lake was surrounded by a ring of mushrooms, each one glowing with a soft, ethereal light. Luna felt drawn to the lake, and she walked closer to investigate. As she reached the water's edge, she saw a figure standing on the other side of the lake.\n\nIt was an old woman, dressed in a long, flowing cloak, with a crown of stars on her head. The old woman looked at Luna with kind eyes, and spoke in a voice that was like music.\n\n\"Welcome, young one,\" she said. \"I have been waiting for you. My name is Astrid, and I am the guardian of this lake. I have been watching you from afar, and I know that you have a special gift within you.\"\n\nLuna was amazed. She had never met anyone like Astrid before, and she felt a deep connection to the old woman.\n\n\"What gift?\" Luna asked, her voice barely above a whisper.\n\nAstrid smiled. \"You have the gift of sight,\" she said. \"You can see beyond the veil of the ordinary world, and into the realm of magic. I can teach you how to harness this gift, if you are willing to learn.\"\n\nLuna's heart was racing with excitement. She had always felt like there was something missing in her life, and now she knew what it was. She was ready to learn, and she was ready to see the world in a whole new way.\n\nAnd so, Luna began her journey with Astrid, learning the secrets of magic and the mysteries of the universe. She spent many moons with the old woman, studying the stars, practicing spells, and exploring the hidden realms of the forest.\n\nAs she grew in power and wisdom, Luna began to see the world in a new light. She saw the magic that lay just beneath the surface of everyday life, and she knew that she was a part of something much bigger than herself.\n\nAnd when she finally returned to her village, Luna was no longer the same girl who had wandered into the forest all those months ago. She was a young woman with a newfound sense of purpose, and a heart full of wonder. She knew that she would always carry the lessons of Astrid with her, and that she would always be connected to the magic of the universe.\n\nFrom that day on, Luna lived a life of wonder and adventure, using her gift of sight to help those in need and to bring light to the world. And though she never forgot the lessons of Astrid, she knew that she was ready to forge her own path, and to make her own magic in the world."
+                "content": "Cześć! Jestem chatbotem, czyli sztuczną inteligencją, która nie ma własnego imienia w klasycznym sensie. Moja funkcja to udzielanie odpowiedzi i pomaganie w rozwiązywaniu problemów, ale nie mam osobowości ani tożsamości w sposób, w jaki ludzie je posiadają. Możesz mnie nazywać \"Asystent\" lub po prostu \"Chatbot\", jeśli chcesz! Jak mogę Ci dziś pomóc?"
             },
             "logprobs": null,
             "finish_reason": "stop"
         }
     ],
     "usage": {
-        "prompt_tokens": 39,
-        "completion_tokens": 736,
-        "total_tokens": 775
+        "prompt_tokens": 55,
+        "completion_tokens": 122,
+        "total_tokens": 177
     }
 }

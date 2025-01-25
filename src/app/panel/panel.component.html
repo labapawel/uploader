@@ -1,11 +1,5 @@
 <div class="container">
-    <div class="menu">
-        <h2>Menu</h2>
-        <ul>
-            <li><span class="name">Wszystkie</span></li>
-            <li *ngFor="let kategorie of katFilter()"><span class="name">{{kategorie.name}}</span><span class="count">{{countFiles(kategorie.catid)}}</span></li>
-        </ul>
-    </div>
+    <app-menu></app-menu>
     <div class="content">
         <h2>Lista wysłanych elementów</h2>
         <div class="search">

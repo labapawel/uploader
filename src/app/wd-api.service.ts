@@ -11,9 +11,10 @@ export class WdApiService {
   public wdauth: string = '';
   public userinfo: any = {};
   public kategorie: any = [];
-  public files: any = [];
+  public files: Files[] = [];
   private katObs: BehaviorSubject<Kat[]> = new BehaviorSubject<Kat[]>([]);
   private filesObs: BehaviorSubject<Files[]> = new BehaviorSubject<Files[]>([]);
+  public katId: number[] = [];
 
   constructor() { 
     this.wdauth = localStorage.getItem('wdauth') || '';
@@ -50,6 +51,7 @@ export class WdApiService {
       .then(response => response.json())
       .then(data => {
         this.files = data;
+        this.katId = [...this.files.map((file) => file.catid)];
         this.filesObs.next(data);
       });
     //}

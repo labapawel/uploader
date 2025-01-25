@@ -1,0 +1,7 @@
+<div class="menu">
+    <h2>Menu</h2>
+    <ul>
+        <li><input type="text" class="name" placeholder="szukaj ....."></li>
+        <li *ngFor="let kategorie of katFilter()"><span class="name">{{kategorie.name}}</span><span class="count">{{countFiles(kategorie.catid)}}</span></li>
+    </ul>
+</div>
