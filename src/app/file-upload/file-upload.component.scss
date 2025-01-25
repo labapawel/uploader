@@ -1,0 +1,50 @@
+.drop-zone {
+    border: 2px dashed #92b0b3;
+    border-radius: 20px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    margin-bottom: 20px;
+
+   
+    
+    &.drag-over {
+        // background-color: #92b0b3;
+        border-color: #303f41;
+    }
+} 
+.progress {
+    margin-bottom: 20px;
+}
+
+button {
+        padding: 10px 20px;
+        border: none;
+        background-color: #e63946;
+        color: #f0f0f0;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: #b02735;
+        }
+    }
+    
+.progress { 
+    .progress-bar {
+        background-color: #e63946;
+        height: 15px;
+        border-radius: 10px;
+        transition: width 0.3s;
+        &.progress-bar-success {
+            background-color: #a8dadc;
+        }
+          
+    }
+   
+
+}

@@ -15,6 +15,8 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './menu.component.scss'
 })
 export class MenuComponent {
+
+  public search: string = '';
   
   public get kategorie(): Kat[] {
     return this.wdApi.kategorie;
@@ -31,7 +33,7 @@ export class MenuComponent {
 
   public katFilter(){
     return this.kategorie.filter((kat) => {
-      return this.katId.includes(kat.catid);
+      return (this.search == "" && this.katId.includes(kat.catid)) || (this.search != "" && kat.name.toLowerCase().includes(this.search.toLowerCase()));
     });
   }
 

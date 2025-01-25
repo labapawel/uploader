@@ -19,7 +19,7 @@ export class WdApiService {
   constructor() { 
     this.wdauth = localStorage.getItem('wdauth') || '';
     this.info();
-    this.getUploadKat();
+    this.getUploadKat(true);
     this.getUploadFiles();
   }
 

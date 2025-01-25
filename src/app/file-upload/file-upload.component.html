@@ -1,0 +1,13 @@
+<div class="drop-zone"
+        (dragover)="onDragOver($event)"
+        (dragleave)="onDragLeave($event)"
+        (drop)="onDrop($event)">
+    <p>Upuść pliki tutaj</p>
+
+
+</div>
+<div class="progress">
+    <div class="progress-bar progress-bar-success" [style.width]="70 + '%'"> 70%</div>
+</div>
+<input type="file" id="ifile" hidden #FileInput multiple>
+<button (click)="FileInput.click()">Wybierz plik</button>
