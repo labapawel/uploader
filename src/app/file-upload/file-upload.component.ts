@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { WdApiService } from '../wd-api.service';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-file-upload',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, NgIf],
   templateUrl: './file-upload.component.html',
   styleUrl: './file-upload.component.scss'
 })
@@ -32,14 +33,16 @@ export class FileUploadComponent {
     
     //  this.wdApi.uploadFile(this.plik, this.wdApi.selKat.catid);
     }
-  
+  get kat(): number {
+    return this.wdApi.selKat.catid;
+  }
 
   constructor(private wdApi: WdApiService, private router: Router) { 
     
   }
 
   public panel(){
-    this.router.navigate(['/panel']);
+   this.wdApi.panel();
   }  
 
   onDragOver(event: DragEvent) : void {

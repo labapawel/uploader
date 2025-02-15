@@ -16,6 +16,15 @@
         border-color: #303f41;
     }
 } 
+
+.info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    color:#e63946;
+    font-size: 20px;
+}
 .progress {
     margin-bottom: 20px;
 }

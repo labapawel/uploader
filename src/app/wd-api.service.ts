@@ -88,6 +88,14 @@ export class WdApiService {
       });
   }
 
+  public panel(){
+    this.getUploadFiles();
+    setTimeout(() => {
+      this.router.navigate(['/panel']);
+    },250);
+  }
+
+
   public login(username: string, password: string):boolean{
     let md5pass = md5(password);
     fetch(`https://dziekanat.wsi.edu.pl/get/wd-auth/auth?album=${username}&pass=${md5pass}`)
@@ -99,9 +107,7 @@ export class WdApiService {
             this.info();
 
             console.log('Zalogowano');       
-            setTimeout(() => {
-              this.router.navigate(['/panel']);
-            }, 300);    
+            this.panel();
           } else {
             localStorage.setItem('wdauth', ""); 
           }
