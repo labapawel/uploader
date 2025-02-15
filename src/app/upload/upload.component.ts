@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { MenuComponent } from '../menu/menu.component';
 import { FileUploadComponent } from '../file-upload/file-upload.component';
+import { WdApiService } from '../wd-api.service';
+
 
 @Component({
   selector: 'app-upload',
@@ -10,6 +12,11 @@ import { FileUploadComponent } from '../file-upload/file-upload.component';
   styleUrl: './upload.component.scss'
 })
 export class UploadComponent {
-  
+
+  constructor() { 
+
+  }
+
+
 
 }

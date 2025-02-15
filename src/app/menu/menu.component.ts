@@ -4,20 +4,30 @@ import 'moment/locale/pl';
 import { WdApiService } from '../wd-api.service';
 import { Kat } from '../kat';
 import { Files } from '../files';
-import { NgFor } from '@angular/common';
+import { NgClass, NgFor } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
   standalone: true,
-  imports: [NgFor, FormsModule],
+  imports: [NgFor, FormsModule, NgClass],
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.scss'
 })
 export class MenuComponent {
 
   public search: string = '';
-  
+
+  get selKat(): Kat {
+    return this.wdApi.selKat;
+  }
+
+  public select(kategoria: Kat){
+    this.wdApi.selKat = kategoria;
+  }
+
+
   public get kategorie(): Kat[] {
     return this.wdApi.kategorie;
   }
@@ -48,12 +58,18 @@ export class MenuComponent {
     return this.files.filter((file) => file.catid == catid).length || 0;
   }
 
+  public upload(){
+    this.router.navigate(['/upload']);
+  }
 
-  constructor(public wdApi: WdApiService) {
+
+  constructor(public wdApi: WdApiService, private router: Router) {
     moment.locale('pl');
 
 
   }
+
+
 
 
 }

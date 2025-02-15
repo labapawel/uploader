@@ -28,11 +28,24 @@ button {
         cursor: pointer;
         border-radius: 5px;
         transition: background-color 0.3s;
+        &.yellow {
+            background-color: #dee97e;
+            color: #333;
+            &:hover {
+                background-color: #d4e157;
+            }
+        }      
 
         &:hover {
             background-color: #b02735;
         }
     }
+
+.ml{
+    margin-left: 10px;
+}    
+
+
     
 .progress { 
     .progress-bar {

@@ -9,5 +9,6 @@
 <div class="progress">
     <div class="progress-bar progress-bar-success" [style.width]="70 + '%'"> 70%</div>
 </div>
-<input type="file" id="ifile" hidden #FileInput multiple>
+<input type="file" id="ifile" [(ngModel)]="plik" (change)="wyslij()" hidden #FileInput multiple>
 <button (click)="FileInput.click()">Wybierz plik</button>
+<button class="ml yellow" (click)="panel()">Anuluj</button>

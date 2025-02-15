@@ -3,6 +3,7 @@ import md5 from 'md5';
 import { BehaviorSubject } from 'rxjs';
 import { Kat } from './kat';
 import { Files } from './files';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +17,7 @@ export class WdApiService {
   private filesObs: BehaviorSubject<Files[]> = new BehaviorSubject<Files[]>([]);
   public katId: number[] = [];
 
-  constructor() { 
+  constructor(private router: Router) {  
     this.wdauth = localStorage.getItem('wdauth') || '';
     this.info();
     this.getUploadKat(true);
@@ -33,6 +34,8 @@ export class WdApiService {
   get isLogged():boolean {
     return this.userinfo.studentid != undefined;
   }
+
+  public selKat: Kat = {catid: 0, name: '', active: true};
   
 
   public getUploadKat(active:boolean=true){
@@ -45,6 +48,25 @@ export class WdApiService {
       });
     //}
   }
+
+
+  public uploadFile(file: File, catid: number)
+    {
+      //https://doha.wsi.edu.pl:10005/uploads?wdauth=36aef51c-dd75-41ac-b895-d01168a1927d&catid=163
+      const formData = new FormData();
+      formData.append('file', file);
+
+      return fetch(`https://doha.wsi.edu.pl:10005/uploads?catid=${catid}&wdauth=${this.wdauth}`, {
+        method: 'POST',
+        body: formData
+      })
+        .then(response => response.json())
+        .then(data => {
+          // Handle the response data
+          console.log("Plik wysłany", data);
+        });
+    }
+
   public getUploadFiles(){
    // if(this.isLogged){
     return fetch(`https://doha.wsi.edu.pl:10005/uploadz?wdauth=${this.wdauth}&catid=0&userid=0&after=0`)
@@ -75,7 +97,11 @@ export class WdApiService {
             this.wdauth = data;
             localStorage.setItem('wdauth', data); 
             this.info();
-            console.log('Zalogowano');           
+
+            console.log('Zalogowano');       
+            setTimeout(() => {
+              this.router.navigate(['/panel']);
+            }, 300);    
           } else {
             localStorage.setItem('wdauth', ""); 
           }

@@ -8,8 +8,8 @@
     overflow: auto;
 
     a {
-        
-        
+
+
         &:hover {
             background-color: #e63946;
         }
@@ -18,7 +18,17 @@
     h2 {
         color: #e63946;
         margin-bottom: 20px;
+        position: relative;
+
+        span {
+            position: absolute;
+            right: 0;           
+            cursor: pointer;
+        }
     }
+
+
+
     ul {
         list-style: none;
         padding: 0;
@@ -28,19 +38,26 @@
             gap: 5px;
             margin: 10px 0;
 
+            &.sel {
+                > .name {
+                    background-color: #574d4e;
+                }
+            }
+
             .name {
                 flex-grow: 1;
             }
 
 
-            
-            span, input {
+
+            span,
+            input {
                 color: #f0f0f0;
                 padding: 10px;
                 background-color: #b02735;
                 cursor: pointer;
                 border: none;
-                
+
                 &.name {
                     color: #f0f0f0;
                     text-decoration: none;
@@ -53,8 +70,6 @@
             }
         }
     }
-    
+
 
 }
-
-
