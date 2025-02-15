@@ -13,8 +13,9 @@ import { WdApiService } from '../wd-api.service';
 })
 export class UploadComponent {
 
-  constructor() { 
-
+  constructor(private wdApi: WdApiService) { 
+    if(!this.wdApi.wdauth)
+      this.wdApi.logout();
   }
 
 

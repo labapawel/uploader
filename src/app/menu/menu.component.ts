@@ -66,6 +66,9 @@ export class MenuComponent {
     this.router.navigate(['/upload']);
   }
 
+  public logout(){
+    this.wdApi.logout();
+  }
 
   constructor(public wdApi: WdApiService, private router: Router) {
     moment.locale('pl');

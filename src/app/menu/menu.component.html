@@ -1,5 +1,7 @@
 <div class="menu">
-    <h2 class="d-flex">Menu <span (click)="upload()">+</span></h2>
+    <h2><span class="left">Menu</span> <span (click)="upload()">+</span> <span (click)="logout()">logout</span>
+        <div class="clear"></div>
+    </h2>
     <ul>
         <li><input type="text" class="name" placeholder="szukaj ....." [(ngModel)]="search"></li>
         <li *ngFor="let kategorie of katFilter()" (click)="select(kategorie)" [ngClass]="{sel: kategorie==selKat}"><span class="name">{{kategorie.name}}</span><span class="count">{{countFiles(kategorie.catid)}}</span></li>

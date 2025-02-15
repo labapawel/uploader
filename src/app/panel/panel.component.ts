@@ -45,6 +45,10 @@ export class PanelComponent {
 
   constructor(public wdApi: WdApiService) {
     moment.locale('pl');
+    if(!this.wdApi.wdauth)
+      this.wdApi.logout();
+
+     
   }
 
 }

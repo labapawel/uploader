@@ -18,12 +18,20 @@
     h2 {
         color: #e63946;
         margin-bottom: 20px;
-        position: relative;
 
         span {
-            position: absolute;
-            right: 0;           
+            float: right;
             cursor: pointer;
+
+            &.left
+            {
+                float: left;
+               cursor: default;
+            }
+        }
+
+        .clear {
+            clear: both;
         }
     }
 

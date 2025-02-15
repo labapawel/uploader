@@ -90,10 +90,20 @@ export class WdApiService {
 
   public panel(){
     this.getUploadFiles();
+    this.getUploadKat();
     setTimeout(() => {
       this.router.navigate(['/panel']);
-    },250);
+    },350);
   }
+
+  public logout(){
+    this.wdauth = '';
+    localStorage.setItem('wdauth', ''); 
+    setTimeout(() => {
+    this.router.navigate(['/']);
+    },200);
+  }
+
 
 
   public login(username: string, password: string):boolean{
