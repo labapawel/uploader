@@ -24,6 +24,10 @@ export class MenuComponent {
   }
 
   public select(kategoria: Kat){
+    if(this.wdApi.selKat == kategoria)
+    {
+      this.wdApi.selKat =  {catid: 0, name: '', active: true}
+    } else
     this.wdApi.selKat = kategoria;
   }
 

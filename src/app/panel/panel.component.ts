@@ -32,10 +32,10 @@ export class PanelComponent {
 
   public filesFilter(){
     return this.files.filter((file) => {
-      if(!this.selKat)
+      if(!this.wdApi.selKat.catid)
         return file.filename.toLowerCase().includes(this.filename.toLowerCase());
       else 
-        return file.catid == this.selKat && file.filename.toLowerCase().includes(this.filename.toLowerCase());
+        return file.catid == this.wdApi.selKat.catid && file.filename.toLowerCase().includes(this.filename.toLowerCase());
     });
   }
 
